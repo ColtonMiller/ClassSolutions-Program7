@@ -10,73 +10,143 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //entry point to our code
-            Console.WriteLine("Hello World!");
+            //our code goes here!
+            Console.WriteLine("Hello World");
 
-            //call my function
-            ForLoopPractice();
+            //loop from 1 to 1000, print out every number
 
-            Greet("Dustin");
-            Greet("that dude from nickleback");
+            for (int i = 1; i <= 1000; i = i + 1)
+            {
+                // the code inside of the code block { }, gets repeated each time
+                Console.WriteLine(i);
+            }
 
-            Console.WriteLine(Multiply(3, 4));
+            //same loop, only using a while this time
+            //Step 1. Create an incrementor
+            int j = 1;
+            //Step 2. Set up your while loop
+            while (j <= 1000)
+            {
+                Console.WriteLine(j);
+                //Step 3. INCREMENT!
+                j = j + 1;
+            }
 
-            int doubleMyAge = Multiply(32, 2);
+            //call our greeting function.
+            Console.WriteLine(Greeting("Santa Claus"));
+            Console.WriteLine(Greeting("That guy from Nickelback"));
 
-            Console.WriteLine(Multiply(doubleMyAge, 4));
-            Console.WriteLine(Multiply(2, Multiply(3, Multiply(6, 12))));
+            //call our random loop function
+            RandomLoop(10);
+            RandomLoop(32);
+            RandomLoop(72);
 
-            Looper(5);
-            Looper(15);
-            Looper(Multiply(3, doubleMyAge));
+            //call multiply
+            Multiply(31, 2);
 
-            //last line of the main function
-            //keep the window open
+            Multiply(31, 2, 3);
+
+            //keep the console window open
+            //this should always be the last line of your Main() function.
             Console.ReadKey();
         }
 
-        //declare new functions outside of other functions, but still inside of a class.
+        //When creating a new function declaration, it MUST go outside of other functions, but inside of a class
 
-
-        static void ForLoopPractice()
+        /// <summary>
+        /// A function that greets somebody
+        /// </summary>
+        /// <param name="name">The name of the person to greet</param>
+        /// <returns>Returns a string with both the greeting and the name</returns>
+        static string Greeting(string name)
         {
-            //anytime this function is called, this code will run
-            for (int i = 0; i <= 1000; i = i + 100)
-            {
-                //for each iteration of the loop, run this code
-                Console.WriteLine(i);
-            }
+            return "Hello, " + name;
         }
 
         /// <summary>
-        /// Greets the user by name, prints to the console
+        /// Does a loop from 1 to 100, incrementing by a random number between 1 and the maximumNumber each time.
         /// </summary>
-        /// <param name="name">The name of the user</param>
-        static void Greet(string name)
+        /// <param name="maximumNumber">Maximum number to increment by</param>
+        static void RandomLoop(int maximumNumber)
         {
-            Console.WriteLine("Hello, " + name + ".");
-        }
-
-        /// <summary>
-        /// return the product of two integers
-        /// </summary>
-        /// <param name="number1">first number to multiply</param>
-        /// <param name="number2">second number to multiply</param>
-        /// <returns>the product of the two integers</returns>
-        static int Multiply(int number1, int number2)
-        {
-            return number1 * number2;
-        }
-
-        //write a function called 'Looper' that takes in a integer parameter called 'loopUntil', which then prints out the numbers between 1 and loopUntil.
-
-        static void Looper(int loopUntil)
-        {
-            for (int i = 1; i <= loopUntil; i = i + 1)
+            //declare a new random number generator
+            Random randomNumberGenerator = new Random();
+            for (int i = 1; i <= 100; i = i + randomNumberGenerator.Next(1, maximumNumber + 1))
             {
                 Console.WriteLine(i);
             }
+
         }
 
+        /// <summary>
+        /// Multipies some nummbas
+        /// </summary>
+        /// <param name="numberOne">a number</param>
+        /// <param name="numberTwo">another number</param>
+        /// <returns>the product of two numbers</returns>
+        static int Multiply(int numberOne, int numberTwo)
+        {
+            return numberOne * numberTwo;
+        }
+
+        static int Multiply(int numberOne, int numberTwo, int numberThree)
+        {
+            return Multiply(Multiply(numberOne, numberTwo), numberThree);
+            //or
+            //return numberOne * numberTwo * numberThree;
+        }
+
+        static void IfElseIfExample(string shirtColor)
+        {
+            if (shirtColor == "red")
+            {
+                Console.WriteLine("nice red shirt, you're probably going to die");
+            }
+            else if (shirtColor == "purple" || shirtColor == "black")
+            {
+                Console.WriteLine("go rockies");
+            }
+            else if (shirtColor == "pink")
+            {
+                Console.WriteLine("hooray for breast cancer awareness");
+            }
+            else
+            {
+                Console.WriteLine("put on a better shirt");
+            }
+
+            {
+
+                //function call.  bad form to use random code blocks.
+            }
+        }
+
+        static void SwitchExample(string shirtColor)
+        {
+            //switches are great for performing code on a single value
+            switch (shirtColor)
+            {
+                case "red":
+                    Console.WriteLine("probably gonna die");
+                    break;
+                case "blue":
+                    Console.WriteLine("something");
+                    break;
+                case "black":
+                case "purple":
+                    //this is a code block, you can do whatever you want here
+                    Greeting("barney");
+                    var x = "hello, i'm a new variable";
+                    if (x.Length > 5)
+                    {
+                        //do something
+                    }
+                    Console.WriteLine("go rockies!");
+                    break;
+                default:
+                    Console.WriteLine("put on a shirt.  you're probably from florida.");
+                    break;
+            }
+        }
     }
 }
