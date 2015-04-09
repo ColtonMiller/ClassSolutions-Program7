@@ -1,0 +1,11 @@
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListAndArrays\ListsAndArrays\ListsAndArrays\bin\Debug\ListsAndArrays.exe.config
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListAndArrays\ListsAndArrays\ListsAndArrays\bin\Debug\ListsAndArrays.exe
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListAndArrays\ListsAndArrays\ListsAndArrays\bin\Debug\ListsAndArrays.pdb
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListAndArrays\ListsAndArrays\ListsAndArrays\obj\Debug\ListsAndArrays.exe
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListAndArrays\ListsAndArrays\ListsAndArrays\obj\Debug\ListsAndArrays.pdb
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListsAndArrays\ListsAndArrays\bin\Debug\ListsAndArrays.exe.config
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListsAndArrays\ListsAndArrays\obj\Debug\ListsAndArrays.exe
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListsAndArrays\ListsAndArrays\obj\Debug\ListsAndArrays.pdb
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListsAndArrays\ListsAndArrays\bin\Debug\ListsAndArrays.exe
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListsAndArrays\ListsAndArrays\bin\Debug\ListsAndArrays.pdb
+C:\Users\Eric\Documents\GitHub\Program6ClassSolutions\ListsAndArrays\ListsAndArrays\obj\Debug\ListsAndArrays.csprojResolveAssemblyReference.cache

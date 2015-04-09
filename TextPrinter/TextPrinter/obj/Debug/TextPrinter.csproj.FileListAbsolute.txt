@@ -1,0 +1,6 @@
+c:\users\eric\documents\visual studio 2013\Projects\TextPrinter\TextPrinter\bin\Debug\TextPrinter.exe.config
+c:\users\eric\documents\visual studio 2013\Projects\TextPrinter\TextPrinter\bin\Debug\TextPrinter.exe
+c:\users\eric\documents\visual studio 2013\Projects\TextPrinter\TextPrinter\bin\Debug\TextPrinter.pdb
+c:\users\eric\documents\visual studio 2013\Projects\TextPrinter\TextPrinter\obj\Debug\TextPrinter.csprojResolveAssemblyReference.cache
+c:\users\eric\documents\visual studio 2013\Projects\TextPrinter\TextPrinter\obj\Debug\TextPrinter.exe
+c:\users\eric\documents\visual studio 2013\Projects\TextPrinter\TextPrinter\obj\Debug\TextPrinter.pdb

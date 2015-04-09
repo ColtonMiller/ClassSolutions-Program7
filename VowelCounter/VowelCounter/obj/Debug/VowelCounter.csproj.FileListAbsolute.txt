@@ -1,0 +1,6 @@
+c:\users\eric\documents\visual studio 2013\Projects\VowelCounter\VowelCounter\bin\Debug\VowelCounter.exe.config
+c:\users\eric\documents\visual studio 2013\Projects\VowelCounter\VowelCounter\bin\Debug\VowelCounter.exe
+c:\users\eric\documents\visual studio 2013\Projects\VowelCounter\VowelCounter\bin\Debug\VowelCounter.pdb
+c:\users\eric\documents\visual studio 2013\Projects\VowelCounter\VowelCounter\obj\Debug\VowelCounter.csprojResolveAssemblyReference.cache
+c:\users\eric\documents\visual studio 2013\Projects\VowelCounter\VowelCounter\obj\Debug\VowelCounter.exe
+c:\users\eric\documents\visual studio 2013\Projects\VowelCounter\VowelCounter\obj\Debug\VowelCounter.pdb
