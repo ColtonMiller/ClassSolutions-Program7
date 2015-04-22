@@ -16,7 +16,7 @@ namespace ClassExamplesLambda
             Console.WriteLine(myCar.Color); //get
 
             // Use the overloaded constructor
-            Car myCustomCar = new Car("Ford", "Black", 250, 33834);
+            Car myCustomCar = new Car("Ford", "Black", 250, 33834, true);
             Console.WriteLine(myCustomCar.Model);
 
             //c
@@ -39,8 +39,24 @@ namespace ClassExamplesLambda
         }
     }
 
+    public class Dealership
+    {
+        public List<Car> CarsOnLot { get; set; }
+        public string Name { get; set; }
+        public string Location { get; set; }
+        public List<Person> Staff { get; set; } 
+    }
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Salary { get; set; }
+        public string Title { get; set; }
+        public DateTime StartDate { get; set; }
+    }
+    
     public class Car
     {
+        public bool IsNew { get; set; }
         private readonly int ftInMile = 5280;
         private int odometer = 183892;
         private string _color;
@@ -66,6 +82,7 @@ namespace ClassExamplesLambda
             this.Color = "Red";
             this.TopSpeed = 300;
             this.odometer = 0;
+            this.IsNew = true;
         }
 
         public Car(string model)
@@ -81,12 +98,13 @@ namespace ClassExamplesLambda
         /// <param name="color">Car Color</param>
         /// <param name="topSpeed">Top Speed in MPH</param>
         /// <param name="odo">Mileage reading</param>
-        public Car(string model, string color, int topSpeed, int odo)
+        public Car(string model, string color, int topSpeed, int odo, bool isNew)
         {
             this.Model = model;
             this.Color = color;
             this.TopSpeed = topSpeed;
             this.odometer = odo;
+            this.IsNew = isNew;
         }
 
         public int getOdometer(string password)
