@@ -11,13 +11,13 @@ namespace GroupPicker
         static void Main(string[] args)
         {
             //new list to hold the student
-            List<string> studentList = new List<string>() {"Keith", "Aaron", "Matt", "Mitch", "Kris", "David", "Umar", "Ryan", "Colton", "Mac", "Lamond", "Mahmoud", "Nathan"};
+            List<string> studentList = new List<string>() {"Keith", "Aaron", "Matt", "Mitch", "David", "Umar", "Ryan", "Colton", "Mac", "Nathan"};
             
             //populating that list with strings (mine are numbers, you'll use names)
 
             //function call for groups of 3
             
-            PickGroups(studentList, 3);
+            PickGroups(studentList, 2);
 
 
             Console.ReadKey();
