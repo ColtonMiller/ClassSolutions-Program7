@@ -11,33 +11,48 @@ namespace InterfacesAndInheritance
         static void Main(string[] args)
         {
             // list of things that fly
-            List<IFlyable> thingsThatFly = new List<IFlyable>();
-            thingsThatFly.Add(new Plane());
-            thingsThatFly.Add(new Bird());
-            thingsThatFly.Add(new Plane());
+            //List<IFlyable> thingsThatFly = new List<IFlyable>();
+            //thingsThatFly.Add(new Plane());
+            //thingsThatFly.Add(new Bird());
+            //thingsThatFly.Add(new Plane());
 
-            foreach (IFlyable flyer in thingsThatFly)
+            //foreach (IFlyable flyer in thingsThatFly)
+            //{
+            //    //flyer.Fly();
+            //}
+
+
+            //List<ICombustionEngine> thingsWithAnEngine = new List<ICombustionEngine>();
+            //thingsWithAnEngine.Add(new Car());
+            //thingsWithAnEngine.Add(new Generator());
+            ////add some fuel to the first item
+            //thingsWithAnEngine[0].Refuel(100); //add some gas to the car
+
+            //foreach (var enginyThing in thingsWithAnEngine)
+            //{
+            //    enginyThing.Go();
+            //}
+
+            //Inhertiance Usage
+            Employee employee1 = new Employee("John", "McClary", "Professional Liar");
+            employee1.Talk();
+
+            Musician musician1 = new Musician("cat", "stevens", "guitar, aka the axe");
+            musician1.Talk();
+            musician1.Jam();
+
+            List<Person> listOfPeople = new List<Person>();
+            listOfPeople.Add(employee1);
+            listOfPeople.Add(musician1);
+            foreach (var x in listOfPeople)
             {
-                //flyer.Fly();
+                
             }
-
-
-            List<ICombustionEngine> thingsWithAnEngine = new List<ICombustionEngine>();
-            thingsWithAnEngine.Add(new Car());
-            thingsWithAnEngine.Add(new Generator());
-            //add some fuel to the first item
-            thingsWithAnEngine[0].Refuel(100); //add some gas to the car
-
-            foreach (var enginyThing in thingsWithAnEngine)
-            {
-                enginyThing.Go();
-            }
-
-            
          
         }
     }
 
+    #region " Interface Stuff "
     //interfaces are declared on the same level as classes (still inside the namespace)
     interface IFlyable
     {
@@ -153,6 +168,7 @@ namespace InterfacesAndInheritance
         }
     }
 
+
     //public class GasStation 
     //{
     //    int FuelLevel { get; set; }
@@ -180,5 +196,77 @@ namespace InterfacesAndInheritance
 
 
 
+    #endregion
+
+    #region " Inheritance Stuff "
+
+    //Abstract: cannot be instantiated (cannot do: Person p = new Person();)
+    public abstract class Person
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        
+        public Person(string firstName, string lastName)
+        {
+            this.FirstName = firstName; this.LastName = lastName;
+        }
+
+        public void Walk()
+        {
+            Console.WriteLine("**whistling sounds**");
+        }
+
+        //virtual modifier: allows us to override the behavior in a child class.  this is only needed on a class marked as abstract
+        public virtual void Talk()
+        {
+            Console.WriteLine("Hey maaaaan, what's up? My name is {0} {1}", this.FirstName, this.LastName);
+        }
+    }
+
+    public class Employee : Person
+    {
+        public string JobTitle { get; set; }
+
+        public Employee(string firstName, string lastName, string jobTitle) : base(firstName, lastName)
+        {
+            //the constructor for the base class will be executed first!
+            this.JobTitle = jobTitle;
+        }
+
+        //override the base class Talk(), because an employee wants to talk about their job.
+        public override void Talk()
+        {
+            base.Talk();
+            Console.WriteLine("My job is {0}, and I LOOOOOVE it!", this.JobTitle);
+        }
+    }
+
+    public class Musician : Employee
+    {
+        public string Instrument { get; set; }
+
+        public Musician(string firstName, string lastName, string instrument)
+            : base(firstName, lastName, "Musician")
+        {
+            this.Instrument = instrument;
+        }
+
+        public override void Talk()
+        {
+            base.Talk();
+            Console.WriteLine("I like to wail on my {0}.  Who wants to hear Freebird?", this.Instrument);
+        }
+
+        public void Jam()
+        {
+            Console.WriteLine("aww man, can you feel it?");
+            Console.Beep(); Console.Beep(); Console.Beep(); Console.Beep(); Console.Beep();
+            
+        }
+    }
+
+
+    #endregion
 
 }
