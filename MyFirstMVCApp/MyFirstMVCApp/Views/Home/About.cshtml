@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = System.Configuration.ConfigurationManager.AppSettings["SiteName"];
+    int myAge = 32;
+    int qty = 5;
+    double price = 3.50;
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>This is my website and it is awesome!
+    <ul>
+        <li>Brats</li>
+        <li>Beers</li>
+    </ul>
+    <strong>I am @myAge years awesome... to the max!</strong>
+    <div>
+        Total Cost: @((qty * price).ToString("c"))
+    </div>
+</p>
+
+@for (int i = 0; i < 50; i++)
+{
+    //inside of a loop, make sure the output is inside of an html element
+    <div>
+        @i
+    </div>
+}
+

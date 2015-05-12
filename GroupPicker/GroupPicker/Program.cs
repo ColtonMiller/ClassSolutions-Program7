@@ -17,7 +17,7 @@ namespace GroupPicker
 
             //function call for groups of 3
             
-            PickGroups(studentList, 2);
+            PickGroups(studentList, 3);
 
 
             Console.ReadKey();
