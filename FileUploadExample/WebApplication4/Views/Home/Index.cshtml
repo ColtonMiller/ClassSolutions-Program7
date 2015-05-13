@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Upload a File</h2>
+
+@if (ViewBag.Message != null)
+{
+    <h4>@ViewBag.Message</h4>
+}
+
+<form action="@Url.Action("Index", "Home")" method="post" enctype="multipart/form-data">
+    <input type="file" id="fileUpload" name="file" />
+    <input type="submit" id="btnSubmit" value="Upload a File" />
+</form>
